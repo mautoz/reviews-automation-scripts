@@ -15,10 +15,11 @@ db_credentials = {
 with db_aux.connect_db(db_credentials) as conn:
     current_path = os.path.dirname(os.path.realpath(__file__))
     scraper_log = f'{current_path}/scraper.log'
-    with open(scraper_log, "a") as myfile:
-        myfile.write(f'{datetime.datetime.now()}\tA tabela de reviews contém: {db_aux.number_rows(conn, "reviews_data")} linhas!\n')
+    with open(scraper_log, "a") as file:
+        file.write(f'{datetime.datetime.now()}\tA tabela de reviews contém: {db_aux.number_rows(conn, "reviews_data")} linhas!\n')
+        file.write(f'{datetime.datetime.now()}\tA tabela de palavras/expressões chaves contém: {db_aux.number_rows(conn, "a11y_words")} linhas!\n')
     
     contato_log = f'{current_path}/contato.log'
-    with open(contato_log, "a") as myfile:
-        myfile.write(f'{datetime.datetime.now()}\tExistem: {db_aux.number_rows(conn, "contato")} contatos registrados!\n')
+    with open(contato_log, "a") as file:
+        file.write(f'{datetime.datetime.now()}\tExistem: {db_aux.number_rows(conn, "contato")} contatos registrados!\n')
 
