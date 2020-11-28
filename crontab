@@ -24,7 +24,12 @@
 # Coloque aqui o caminho para a pasta que está o script 'run'
 SCRAPER_PATH=<caminho-do-run>
 
+# As três linhas abaixo são usadas caso queira automatizar o backup do BD.
+# No exemplo, o back será feito todos os dias às 21hs.
 
-# Roda o script para atualizar o log de inserção e 
+#PGPASSWORD=senha_para_postgres
+#HOJE=date +%Y%m%d%H%M
+#0 21 * * * pg_dump reviews-classifier > $($HOJE)_kos.sql.bkp
+
+# Roda o script para atualizar o log que fornece o número de linhas de reviews e de palavras chaves 
 0 10,22 * * * ${SCRAPER_PATH}/run
-

@@ -18,6 +18,7 @@ with db_aux.connect_db(db_credentials) as conn:
     with open(scraper_log, "a") as file:
         file.write(f'{datetime.datetime.now()}\tA tabela de reviews contém: {db_aux.number_rows(conn, "reviews_data")} linhas!\n')
         file.write(f'{datetime.datetime.now()}\tA tabela de palavras/expressões chaves contém: {db_aux.number_rows(conn, "a11y_words")} linhas!\n')
+        file.write(f'{datetime.datetime.now()}\t{db_aux.rows_human_decision(conn)} linhas foram analisadas por humanos!\n')
     
     contato_log = f'{current_path}/contato.log'
     with open(contato_log, "a") as file:
