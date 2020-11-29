@@ -2,8 +2,7 @@
 
 # ACH2018 - PSGII
 
-Este repositório faz parte do projeto de ACH2018,  funcionando em conjunto com o [review-classifier]
-(https://github.com/mautoz/reviews-classifier) e [python-webhook](https://github.com/mautoz/python-webhook).
+Este repositório faz parte do projeto de ACH2018,  funcionando em conjunto com o [review-classifier](https://github.com/mautoz/reviews-classifier) e [python-webhook](https://github.com/mautoz/python-webhook).
 Algumas funcionalidades do projeto podem ou devem ser automatizadas. Os códigos para esses casos ficaram melhores em um repositório separado.
 
 
