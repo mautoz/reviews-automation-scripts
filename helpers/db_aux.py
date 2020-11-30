@@ -26,3 +26,29 @@ def rows_human_decision(conn):
     cur.execute(f"select count(*) from reviews_data where is_a11y_human = 1 or is_a11y_human = 0")
     result = cur.fetchone()
     return result[0]
+
+
+def insert_db(conn, table, review):
+    try:
+        cur = conn.cursor()
+        query = f"INSERT INTO {table} ( \
+                scraper_date, \
+                review_source, \
+                review_app, \
+                review_language, \
+                review_raw \
+            ) VALUES (%s, %s, %s, %s, %s)"
+        values = (
+            review["scraper_date"],
+            review["source"],
+            review["app_name"],
+            review["language"],
+            review["review_content"]
+        )
+        cur.execute(query, values)
+        print("+ Inserting...")
+        conn.commit()
+    except Exception as err:
+        print(err)
+        print("- Something get wrong! The file wasn't inserted!")
+        raise

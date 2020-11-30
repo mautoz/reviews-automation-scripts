@@ -1,0 +1,4 @@
+title;appId;url
+Facebook;com.facebook.katana;http://localhost:3000/api/apps/com.facebook.katana
+Facebook Gaming: Watch, Play, and Connect;com.facebook.games;http://localhost:3000/api/apps/com.facebook.games
+Facebook Business Suite;com.facebook.pages.app;http://localhost:3000/api/apps/com.facebook.pages.app
