@@ -14,10 +14,30 @@ Algumas funcionalidades do projeto podem ou devem ser automatizadas. Os códigos
 
 # Instruções
 
-1. As configurações deste repositório devem ser as últimas coisas feitas.
+1. As configurações deste repositório devem ser as últimas coisas feitas e necessitam alterar o cron da máquina. Logo, antes de iniciar, confira se ele já está instalado com o comando:
+```
+$ crontab -e
+```
 
-- O 'scrapers_log.py' 
+2. Fala um clone deste repositório em sua máquina e verifique com cuidado o endereço em que ficará, pois será necessário para alterar o cron. Na dúvida, utilize o comando:
+```
+$ pwd
+/home/<caminho_da_maquina>/reviews-classifier
+```
+
+3. Configure o [run](run) com as informações do seu Postgres.
+
+4. Copie e cole o caminho acima no [cron](crontab), por exemplo:
+```
+SCRAPER_PATH=/home/<caminho_da_maquina>/reviews-classifier
+```
+
+5. Considero que os scripts rodaram em uma máquina pessoal, por isso, verifique se o horário para rodar vc terá a máquina ligada. Deixei como exemplo às 10 e 22 horas! Se tudo estiver ok, é só salvar!
+
+6. Se as configurações estiverem corretas, os script rodarão sozinho sempre que a máquina estiver ligada. Na pasta [exemplos](/exemplos) é possível ver alguns exemplos de arquivos logs de saída.
 
 
 # Troubleshooting
 
+- Pode ser que seja necessário instalar o cron! Optei por não indicar nenhum tutorial pois existem diversos disponíveis, escolha o que mais agradar!
+- Em algumas máquinas, o Python roda como 'python3' no lugar de 'python'.
