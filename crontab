@@ -23,14 +23,17 @@
 # Coloque aqui o caminho para a pasta que está o script 'run'
 SCRAPER_PATH=<caminho-do-run>
 
+
 # As três linhas abaixo são usadas caso queira automatizar o backup do BD.
 # Caso queria que funcione, remove os comentários e preencha a senha do PGPASSWORD
 # com a senha do seu bd.
 # No exemplo, o back será feito todos os dias às 21hs.
 
+
 # PGPASSWORD=senha_para_postgres
 # HOJE=date +%Y%m%d%H%M
 # 0 21 * * * pg_dump reviews-classifier > $($HOJE)_kos.sql.bkp
+
 
 # Esta tarefa deve rodar antes da tarefa abaixo, pois aqui iniciamos o Google API
 # para então realizar o scraper abaixo. No exemplo, eu inicio o Google API às 23:07
