@@ -30,7 +30,7 @@ SCRAPER_PATH=<caminho-do-run>
 # No exemplo, o back será feito todos os dias às 21hs.
 # PGPASSWORD=senha_para_postgres
 # HOJE=date +%Y%m%d%H%M
-# 0 21 * * * pg_dump reviews-classifier > $($HOJE)_kos.sql.bkp
+# 0 21 * * * pg_dump reviews-classifier > $($HOJE)_reviews_classifier.sql.bkp
 
 
 # Esta tarefa deve rodar antes da tarefa abaixo, pois aqui iniciamos o Google API
