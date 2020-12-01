@@ -40,6 +40,6 @@ SCRAPER_PATH=<caminho-do-run>
 
 # Roda o script para atualizar o log que fornece o número de linhas de reviews
 # e de palavras chaves. Útil para ter controle das atualizações que são feitas 
-# no bd e verificar se alguém reportou algum erro! Aqui, executa às 10:09 e 22:09. 
+# no bd e verificar se alguém reportou algum erro! Aqui, executa às 23:09. 
 9 23 * * * ${SCRAPER_PATH}/run
 
