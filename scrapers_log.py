@@ -12,6 +12,7 @@ db_credentials = {
     'port' : os.getenv('POSTGRES_PORT') 
 }
 
+
 with db_aux.connect_db(db_credentials) as conn:
     current_path = os.path.dirname(os.path.realpath(__file__))
     scraper_log = f'{current_path}/scraper.log'

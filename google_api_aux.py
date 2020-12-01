@@ -6,12 +6,14 @@ import os
 import argparse
 
 
+# Retorna a lista com a busca por nome de um App
 def get_reviews(appName):
     url = f'http://localhost:3000/api/apps/?q={appName}'
     result = requests.get(url)
     return result.json()
 
 
+# Insere as opções no .csv
 def get_list_of_apps(appName):
     response = get_reviews(appName)
 
