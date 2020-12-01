@@ -32,7 +32,14 @@ SCRAPER_PATH=<caminho-do-run>
 # HOJE=date +%Y%m%d%H%M
 # 0 21 * * * pg_dump reviews-classifier > $($HOJE)_kos.sql.bkp
 
+# Esta tarefa deve rodar antes da tarefa abaixo, pois aqui iniciamos o Google API
+# para então realizar o scraper abaixo. No exemplo, eu inicio o Google API às 23:07
+# para então, às 23:09, iniciar o scraper. 
+7 23 * * * ${SCRAPER_PATH}/run_google
+
+
 # Roda o script para atualizar o log que fornece o número de linhas de reviews
 # e de palavras chaves. Útil para ter controle das atualizações que são feitas 
-# no bd e verificar se alguém reportou algum erro! 
-0 10,22 * * * ${SCRAPER_PATH}/run
+# no bd e verificar se alguém reportou algum erro! Aqui, executa às 10:09 e 22:09. 
+9 23 * * * ${SCRAPER_PATH}/run
+

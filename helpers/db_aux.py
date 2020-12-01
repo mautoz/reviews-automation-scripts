@@ -28,10 +28,10 @@ def rows_human_decision(conn):
     return result[0]
 
 
-def insert_db(conn, table, review):
+def insert_db(conn, review):
     try:
         cur = conn.cursor()
-        query = f"INSERT INTO {table} ( \
+        query = f"INSERT INTO reviews_data ( \
                 scraper_date, \
                 review_source, \
                 review_app, \
@@ -52,3 +52,9 @@ def insert_db(conn, table, review):
         print(err)
         print("- Something get wrong! The file wasn't inserted!")
         raise
+
+
+def search_row(conn, date_db):
+    cur = conn.cursor()
+    cur.execute(f"SELECT * FROM reviews_data WHERE scraper_date='{date_db}'")
+    return cur.fetchone()

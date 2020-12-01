@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Verifique com atenção o seu caminho para o scripts, aqui é só um exemplo 
+# cd /home/<caminho_da_maquina>/google-play-api
+cd /home/versatushpc/Documentos/Git/google-play-api
+
+python3 start_google_api.py
+

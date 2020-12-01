@@ -11,6 +11,8 @@ export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=versatushpc
 export POSTGRES_PORT=5432
 
+# Verifique com atenção o seu caminho para o scripts, aqui é só um exemplo 
+python3 /home/versatushpc/Documentos/Git/reviews-automation-scripts/scraper_google_reviews.py
 python3 /home/versatushpc/Documentos/Git/reviews-automation-scripts/scrapers_log.py
 
 unset postgres_host

@@ -18,13 +18,11 @@ def get_list_of_apps(appName):
     results = []
     current_path = os.path.dirname(os.path.realpath(__file__))
     results_list = f'{current_path}/app_search_results.csv'
-    with open(results_list, "w+", encoding='utf-8') as file:
-        file.write('title;appId;url\n')
+    with open(results_list, "a", encoding='utf-8') as file:
+        #file.write('title;appId\n')
         for app in response['results']:
-            file.write(f'{app["title"]};{app["appId"]};{app["url"]}\n')
-
-          
-
+            file.write(f'{app["title"]};{app["appId"]}\n')
+    
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Parser Google API Aux")
