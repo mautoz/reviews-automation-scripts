@@ -12,6 +12,7 @@ Algumas funcionalidades do projeto podem ou devem ser automatizadas. Os códigos
 
 - Git
 - Python >= 3.7
+- Node >= 12.20.0
 
 Bibliotecas:
 - psycopg2 == 2.8.6
