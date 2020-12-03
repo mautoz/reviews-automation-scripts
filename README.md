@@ -72,6 +72,7 @@ Se você já fez isso na seção anterior, não precisa repetir.
 python3 google_api_aux.py --search "facebook"
 ```
 Caso queira, pode preencher manualmente o csv tomando cuidado para não errar o appId e utilizando ';' como delimitador. O header foi retirado para não sobrescrever o csv, assim é possível buscar vários app e só dar append na lista que será coletada. 
+Um exemplo está disponível em [app_seach_results.csv](/app_seach_results.csv).
 
 7. O 'scraper_google_reviews.py' será responsável por ler o 'app_seach_results.csv' e coletar os reviews de todos os itens que estiver na lista. Dependendo do tamanho, o processo pode ser demorado.
 
