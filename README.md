@@ -67,9 +67,9 @@ Se você já fez isso na seção anterior, não precisa repetir.
 
 5. Se as configurações estiverem corretas, os script rodarão sozinho sempre que a máquina estiver ligada. Na pasta [exemplos](/exemplos) é possível ver alguns exemplos de arquivos logs de saída.
 
-6. Para o _scraper_ de _reviews_ é necessário antes executar antes o 'google_api_seach.py' que faz uma busca dos aplicaticos relacionado ao termo buscado e os salva em um '.csv' chamado 'app_seach_results.csv'. Por exemplo, se você quiser buscar 'facebook' faça:
+6. Para o _scraper_ de _reviews_ é necessário antes executar antes o 'google_api_seach.py' que faz uma busca dos aplicaticos relacionados ao termo buscado e os salva em um '.csv' chamado 'app_seach_results.csv'. Por exemplo, se você quiser buscar 'facebook' faça:
 ```
-python3 scraper_google_reviews.py --search "facebook"
+python3 google_api_aux.py --search "facebook"
 ```
 Caso queira, pode preencher manualmente o csv tomando cuidado para não errar o appId e utilizando ';' como delimitador. O header foi retirado para não sobrescrever o csv, assim é possível buscar vários app e só dar append na lista que será coletada. 
 
