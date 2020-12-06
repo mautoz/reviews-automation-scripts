@@ -67,14 +67,15 @@ Se você já fez isso na seção anterior, não precisa repetir.
 
 5. Se as configurações estiverem corretas, os script rodarão sozinho sempre que a máquina estiver ligada. Na pasta [exemplos](/exemplos) é possível ver alguns exemplos de arquivos logs de saída.
 
-6. Para o _scraper_ de _reviews_ é necessário antes executar antes o [google_api_seach.py](./google_api_search.py) que faz uma busca dos aplicaticos relacionados ao termo buscado e os salva em um '.csv' chamado [app_seach_results.csv](./app_search_results.csv). Por exemplo, se você quiser buscar 'facebook' faça:
+6. Para o _scraper_ de _reviews_ é necessário antes executar antes o [google_api_aux.py](./google_api_aux.py) que faz uma busca dos aplicaticos relacionados ao termo buscado e os salva em um '.csv' chamado [app_search_results.csv](./app_search_results.csv). Por exemplo, se você quiser buscar 'facebook' faça:
 ```
 python3 google_api_aux.py --search "facebook"
 ```
 Caso queira, pode preencher manualmente o csv tomando cuidado para não errar o appId e utilizando ';' como delimitador. O header foi retirado para não sobrescrever o csv, assim é possível buscar vários app e só dar append na lista que será coletada. 
-Um exemplo está disponível em [app_seach_results.csv](./app_search_results.csv).
+Um exemplo está disponível em [app_search_results.csv](./app_search_results.csv).
+Não esqueça que essa parte é manual, então é necessário ligar o Google play API manualmente.
 
-7. O [scraper_google_reviews.py](./scraper_google_reviews.py) será responsável por ler o [app_seach_results.csv](./app_search_results.csv) e coletar os reviews de todos os itens que estiver na lista. Dependendo do tamanho, o processo pode ser demorado.
+7. O [scraper_google_reviews.py](./scraper_google_reviews.py) será responsável por ler o [app_search_results.csv](./app_search_results.csv) e coletar os reviews de todos os itens que estiver na lista. Dependendo do tamanho, o processo pode ser demorado.
 
 # Troubleshooting
 
